@@ -73,12 +73,12 @@ export const SignUp: React.FC = () => {
       email: "",
       password: "",
     },
+
     validationSchema: validationSchema,
     onSubmit: async (values: FormFields, actions) => {
       setError([]);
 
       try {
-        await createUser(values);
         const response = (await createUser({
           firstName: values.firstName,
           lastName: values.lastName,
